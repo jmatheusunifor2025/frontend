@@ -1,0 +1,161 @@
+:root {
+  --primary-color: #4CAF50;
+  --primary-hover: #3e8e41;
+  --warning-color: #ff9800;
+  --warning-hover: #e68a00;
+  --danger-color: #f44336;
+  --danger-hover: #da190b;
+  --info-color: #2196F3;
+  --info-hover: #0b7dda;
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Estilos de Card */
+.card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Formulários */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Ocultar as setas do input number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Botões */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #cccccc !important;
+  cursor: not-allowed;
+}
+
+.btn-success { background-color: var(--primary-color); }
+.btn-success:hover { background-color: var(--primary-hover); }
+
+.btn-danger { background-color: var(--danger-color); }
+.btn-danger:hover { background-color: var(--danger-hover); }
+
+.btn-warning { background-color: var(--warning-color); color: #fff; }
+.btn-warning:hover { background-color: var(--warning-hover); }
+
+.btn-info { background-color: var(--info-color); }
+.btn-info:hover { background-color: var(--info-hover); }
+
+.btn-secondary { background-color: #777; }
+.btn-secondary:hover { background-color: #555; }
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.inline-form {
+  display: flex;
+  gap: 10px;
+}
+
+/* Cabeçalho da Lista e Botão de Atualizar */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.list-header h2 {
+  margin: 0;
+  text-align: left;
+}
+
+/* Lista de Produtos */
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  background-color: #fafafa;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.product-info {
+  flex-grow: 1;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.result-box {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}

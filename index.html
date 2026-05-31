@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product CRUD</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Gerenciamento de Produtos</h1>
+
+    <section class="card">
+      <h2>Buscar Produto por ID</h2>
+      <form id="search-form" class="inline-form">
+        <input type="number" id="search-id" placeholder="Digite o ID" required>
+        <button type="submit" class="btn-info">Buscar</button>
+      </form>
+      <div id="search-result" class="result-box"></div>
+    </section>
+
+    <section class="card">
+      <h2>Adicionar Produto</h2>
+      <form id="add-product-form">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="price">Preço:</label>
+          <input type="number" id="price" name="price" required step="0.01">
+        </div>
+        <div class="form-group">
+          <label for="description">Descrição:</label>
+          <input type="text" id="description" name="description" required>
+        </div>
+        <button type="submit" class="btn-success">Adicionar</button>
+      </form>
+    </section>
+
+    <section class="card hidden" id="update-section">
+      <h2>Atualizar Produto</h2>
+      <form id="update-product-form">
+        <input type="hidden" id="update-id">
+        <div class="form-group">
+          <label for="update-name">Nome:</label>
+          <input type="text" id="update-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="update-price">Preço:</label>
+          <input type="number" id="update-price" name="price" required step="0.01">
+        </div>
+        <div class="form-group">
+          <label for="update-description">Descrição:</label>
+          <input type="text" id="update-description" name="description" required>
+        </div>
+        <div class="button-group">
+          <button type="submit" class="btn-warning">Salvar Alterações</button>
+          <button type="button" id="cancel-update" class="btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="list-header">
+        <h2>Lista de Produtos</h2>
+        <button id="btn-refresh" class="btn-info">Atualizar Lista 🔄</button>
+      </div>
+      <ul id="products" class="product-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
