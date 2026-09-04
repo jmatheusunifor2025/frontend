@@ -34,6 +34,7 @@ let pendingChanges = {
 function renderProducts() {
   productList.innerHTML = '';
     //teste git
+    //teste gi2
   localProducts.forEach(product => {
     const li = document.createElement('li');
     li.className = 'product-item';
