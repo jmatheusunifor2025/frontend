@@ -33,7 +33,7 @@ let pendingChanges = {
 // ==========================================
 function renderProducts() {
   productList.innerHTML = '';
-
+    //teste git
   localProducts.forEach(product => {
     const li = document.createElement('li');
     li.className = 'product-item';
