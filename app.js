@@ -35,6 +35,7 @@ function renderProducts() {
   productList.innerHTML = '';
     //teste git
     //teste gi2
+    //teste git3
   localProducts.forEach(product => {
     const li = document.createElement('li');
     li.className = 'product-item';
